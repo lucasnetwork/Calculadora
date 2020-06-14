@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
-    text-align:center;
-    border:1px solid #000;
+    &.number{
+        height:60px;    
+    }
     width:50px;
+    height:36px;
+    text-align:center;
+    border:none;
 `
 
 export default Button
