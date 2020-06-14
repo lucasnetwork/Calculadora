@@ -1,11 +1,19 @@
-import React from 'react';
-import './App.css';
+import React,{useState} from 'react';
+import ContentButtons from './Components/styles/ContentButtons'
+import Buttons from './Components/Buttons'
+import GlobalStyle from './Components/styles/Global'
 
 function App() {
   return (
-    <div className="App">
-      Hello world
-    </div>
+    <>
+      <GlobalStyle/>
+      <div className="App">
+
+        <ContentButtons>
+          <Buttons/>
+        </ContentButtons>
+      </div>
+    </>
   );
 }
 
