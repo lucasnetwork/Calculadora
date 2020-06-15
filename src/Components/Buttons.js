@@ -1,4 +1,8 @@
 import React,{useEffect} from 'react'
+import {FiDelete,FiMinus} from 'react-icons/fi'
+import {RiDivideLine} from 'react-icons/ri'
+import {TiTimes} from 'react-icons/ti'
+import {GoPlus} from 'react-icons/go'
 import Button from './styles/Button'
 
 const numbers = ['7','8','9','4','5','6','1','2','3','0',',','=']
@@ -37,6 +41,12 @@ const Buttons = ({currentValue,setCurrentValue,setCurrentOperation,previousValue
         sumValues()
         setCurrentOperation(e.target.value)
     }
+    function clearNumberCurrent(){
+        setCurrentValue("0")
+    }
+    function clearAll(){
+
+    }
     return (
         <>
             <div>
@@ -44,12 +54,12 @@ const Buttons = ({currentValue,setCurrentValue,setCurrentOperation,previousValue
                     <Button className="number" value={number} onClick={handlerSetValue}>{number} </Button>
                 ))}
             </div>
-            <div>
-                <Button className="arit" value="x" onClick={handlerSetOperation}>a</Button>
-                <Button className="arit" value="/" onClick={handlerSetOperation}>/</Button>
-                <Button className="arit" value="*" onClick={handlerSetOperation}>*</Button>
-                <Button className="arit" value="-" onClick={handlerSetOperation}>-</Button>
-                <Button className="arit" value="+" onClick={handlerSetOperation}>+</Button>
+            <div className="arit">
+                <Button className="arit"  onClick={clearNumberCurrent}><FiDelete/></Button>
+                <Button className="arit" value="/" onClick={handlerSetOperation}><RiDivideLine/></Button>
+                <Button className="arit" value="*" onClick={handlerSetOperation}><TiTimes/></Button>
+                <Button className="arit" value="-" onClick={handlerSetOperation}><FiMinus/></Button>
+                <Button className="arit" value="+" onClick={handlerSetOperation}><GoPlus/></Button>
             </div>
         </>
     )
