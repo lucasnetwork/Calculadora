@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
         .content{
             display:flex;
             flex-direction:column;
+            width:255px
         }
     }
 `
