@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
         justify-content:space-around;
         align-items:center;
         height:100%;
+        .content{
+            display:flex;
+            flex-direction:column;
+        }
     }
 `
 
