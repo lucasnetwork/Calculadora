@@ -1,10 +1,7 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import ShowOperationContent from './styles/ShowOperationContent'
 
-const ShowOperation = ({currentValue,currentOperation,setCurrentOperation}) =>{
-    useEffect(() =>{
-        
-    },[currentOperation])    
+const ShowOperation = ({currentValue,currentOperation}) =>{
     return(
         <ShowOperationContent>
             <div>{currentValue}</div>
