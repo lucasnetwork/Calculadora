@@ -1,5 +1,8 @@
 import React,{useState} from 'react';
+
 import ContentButtons from './Components/styles/ContentButtons'
+import AppContent from './Components/styles/AppContent'
+
 import Buttons from './Components/Buttons'
 import ShowOperation from './Components/ShowOperation'
 
@@ -12,7 +15,7 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <div className="App">
+      <AppContent>
         <div className="content">
           <ShowOperation 
             currentValue={currentValue} 
@@ -29,7 +32,7 @@ function App() {
             />
           </ContentButtons>
         </div>
-      </div>
+      </AppContent>
     </>
   );
 }

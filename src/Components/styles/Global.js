@@ -10,16 +10,10 @@ const GlobalStyle = createGlobalStyle`
         height:100vh;
         width:100%;
     }
-    .App{
+    .content{
         display:flex;
-        justify-content:space-around;
-        align-items:center;
-        height:100%;
-        .content{
-            display:flex;
-            flex-direction:column;
-            width:255px
-        }
+        flex-direction:column;
+        width:255px;
     }
 `
 
